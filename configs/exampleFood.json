@@ -1,0 +1,44 @@
+{
+	"description": {
+		"identifier": "red_jaguar:fired_bowl_gruel",
+		"base_game_version": "0.3.8"
+	},
+	"components": {
+		"game_object": {
+			"localization": {
+				"needs_localization": false,
+				"name": "Bowl of Gruel",
+				"plural": "Bowls of Gruel"
+			},
+			"scale": 1.0,
+			"model": "gruelBowlFired",
+			"physics": true,
+			"marker_positions": "FIXME",
+			"resourceTypeIndex": "FIXME"
+		},
+		"food": {
+			"item_when_eaten": "jaguar:fired_bowl",
+			"value": 0.7,
+			"portions": 1
+
+		},
+		"resource": {
+			"storage_type": "food_bowls"
+		},
+		"research": {
+			"required_research": [
+				"potteryFiring"
+			]
+		},
+		"decoration": {
+			"enabled": true
+		},
+		"evolutions": [
+			{
+				"category": "rot",
+				"min_time": "3 * days",
+				"item_when_evolved": "jaguar:fired_bowl_rotten"
+			}
+		]
+	}
+}
