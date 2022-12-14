@@ -28,7 +28,24 @@
 		"research": {
 			"required_research": [
 				"potteryFiring"
-			]
+			]			
+		},
+		"crafting": {
+			"disabledUntilCraftableResearched": true,
+			"inProgressBuildModel": "craftSimple",
+			"required_skills": "campfireCooking",
+			"required_items": [
+				"firedUrnHulletWheat",
+				"firedBowl",
+				"firedCookingPot"
+			],
+			"_comment": "Not sure how to handle multiples of each ingredient. E.g. 2 beetroots for soup. Add 'beetroot' twice and count instances?",
+			"leftover_items": [
+				"firedUrn",
+				"firedCookingPot"
+			],
+			"_comment": "leftover_items replaces 'outputObjectInfo' in 'craftable.lua'",
+			"crafting_area": "campfire"
 		},
 		"decoration": {
 			"enabled": true
@@ -37,7 +54,11 @@
 			{
 				"category": "rot",
 				"min_time": "3 * days",
-				"item_when_evolved": "jaguar:fired_bowl_rotten"
+				"item_when_evolved": [
+					"jaguar:fired_bowl_rotten",
+					"jaguar:a_second_thing"
+				],
+				"_comment": "Multiple items e.g. dead animals rot and drop bones + woolskins. Could hammerstone also auto-create a rotten object variation automatically? Rather than having 2 config files"
 			}
 		]
 	}
