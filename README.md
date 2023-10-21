@@ -1,5 +1,11 @@
 # hammerstone-config-api
 
+## Archived
+
+This repo has been archived, as it no longer contains up to date information.
+
+## Information
+
 This is a temporary, experimental repository which documents a potential data-driven API for Sapiens Modding. The `configs` folder contains various example configurations. The goal is that we can eventually empower Hammerstone to read and consume these config files. 
 
 Here is an example of the proposed flow:
